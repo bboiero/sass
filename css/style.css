@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vw;
+  min-width: 100vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px auto 80px;
+}
+body header {
+  background: linear-gradient(to right, rgb(212, 228, 238), rgb(26, 130, 194));
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "logo nav";
+  justify-content: space-around;
+  align-items: center;
+}
+body header nav {
+  width: 100%;
+  font-size: 1.2rem;
+  visibility: hidden;
+  grid-area: nav;
+}
+body header nav ul {
+  list-style-type: none;
+  display: flex;
+}
+body header nav ul li {
+  margin: 0 0 0 1.5rem;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  transition: all infinite;
+}
+body header nav ul li:hover {
+  font-size: 1.3rem;
+}
+body main {
+  background-image: url(https://images.pexels.com/photos/4483327/pexels-photo-4483327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main h1 {
+  color: black;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1.75rem;
+}
+body main img {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  height: 15rem;
+  animation-name: aparecer;
+  animation-iteration-count: initial;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+body footer {
+  color: rgb(8, 6, 16);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(168, 210, 210);
+}
+body footer a {
+  text-decoration: none;
+  transition: all infinite;
+  color: rgb(20, 16, 16);
+}
+
+.logo {
+  margin-left: 2rem;
+  grid-area: logo;
+  margin-left: 30rem;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@media (min-width: 768px) {
+  body {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  body main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  body main h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 2.5rem;
+  }
+  body main img {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 3rem;
+    max-width: 120%;
+    height: 20rem;
+  }
+}
+@media (min-width: 1100px) {
+  body header {
+    display: flex;
+    justify-content: space-around;
+  }
+  body header nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    position: relative;
+    padding: 0 1.5rem 0 1.5rem;
+    list-style: none;
+  }
+  body main h1 {
+    font-weight: 700;
+    font-size: 4rem;
+    padding-top: 2.5rem;
+  }
+  body main img {
+    height: 30rem;
+  }
+
+  .logo {
+    margin-left: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
