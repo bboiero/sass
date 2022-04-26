@@ -41,7 +41,6 @@ body{
                 display: flex;
             
             
-
                 & li{
                    margin: 0 0 0 1.5rem; 
                    color: white;
@@ -120,6 +119,7 @@ body{
     margin-left: 30rem;
 }
 
+
 @import "animaciones";
 
 @media (min-width: 768px){
@@ -157,6 +157,7 @@ body{
         & header{
             display: flex;
             justify-content: space-around;
+            list-style-type: none;
 
             & nav{
                 visibility: visible;
@@ -166,7 +167,13 @@ body{
                 height: auto;
                 position: relative;
                 padding: 0 1.5rem 0 1.5rem;
-                list-style: none;
+                list-style-type: none;
+                & ul{
+                    & a{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
             }
         }
 
