@@ -1,7 +1,7 @@
 {
-  "name": "proyecto-sass",
+  "name": "Instrumed - Instrumental Quirúrgico",
   "version": "1.0.0",
-  "description": "",
+  "description": "El proyecto consiste en la fabricación y/o reparación de instrumental quirúrgico, de una manera artesanal y a pedido del cliente, lo cual distingue al resto de las empresas en el rubro",
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass --watch scss/style.scss css/style.css"

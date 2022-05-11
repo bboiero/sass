@@ -11,6 +11,8 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 80px auto 80px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 body header {
   background: linear-gradient(to right, rgb(212, 228, 238), rgb(26, 130, 194));
@@ -143,7 +145,7 @@ body .grid__productos {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 20px auto;
-  gap: 4rem;
+  gap: 5rem;
 }
 body .grid__productos .galeria {
   list-style: none;
@@ -255,38 +257,24 @@ body footer a {
     max-width: 120%;
     height: 20rem;
   }
-
-  .container {
-    min-width: 100vw;
-    min-height: 100vh;
+  body .containerNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
   }
-
-  .main__image {
-    margin-top: 1.5rem;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    margin-right: 3rem;
-    max-width: 120%;
-    height: 20rem;
-  }
-
-  .main__title {
-    color: black;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 2.5rem;
-  }
-
-  main {
+  body .containerNosotros .tt {
     display: flex;
-    flex-direction: row;
-    justify-items: space-around;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
   }
-
-  .Titulo {
+  body .containerNosotros .tt .Titulo {
     color: black;
     font-style: bold;
     font-weight: 500;
@@ -295,84 +283,38 @@ body footer a {
     text-transform: uppercase;
     padding-top: 1.75rem;
   }
-
-  .producto {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    max-width: 140%;
-    height: 30rem;
-  }
-
-  .galeria {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    justify-items: center;
-    align-items: center;
-  }
-
-  .containerNosotros {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .imageNosotros, body .imageServicio {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    width: 20rem;
-    height: 25rem;
-    padding-top: 5rem;
-    justify-self: center;
-  }
-
-  .imageServicio {
-    width: 25rem;
-    height: 20rem;
-    justify-self: center;
-    animation-name: aparecer2;
-    animation-iteration-count: initial;
-    animation-timing-function: ease;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    padding-top: 3rem;
-  }
-
-  .Texto {
+  body .containerNosotros .tt .Texto {
     color: black;
     font-style: normal;
     font-weight: 300;
     font-size: 1.5rem;
     text-align: center;
   }
-
-  .tt {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    justify-items: center;
-    padding-left: 1.5rem;
-    padding-top: 5rem;
-  }
-
-  .cardForm {
-    background-color: rgb(247, 239, 239);
+  body .containerNosotros .imageNosotros, body .containerNosotros .imageServicio {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
     width: 20rem;
-    height: 20rem;
-    border: 0.2rem solid black;
-    padding-left: 3rem;
-    margin: 3rem 0 3rem 0;
-    border-radius: 0.5rem;
+    height: 25rem;
+    padding-top: 1rem;
+    justify-self: center;
   }
-
-  .cardValores {
+  body .Titulo {
+    color: black;
+    font-style: bold;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.75rem;
+  }
+  body .cardSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  body .cardSection .cardValores {
     background-color: rgb(227, 223, 223);
     height: auto;
     width: 200px;
@@ -384,12 +326,57 @@ body footer a {
     justify-items: center;
     align-items: center;
   }
+  body .backgroundInstrumental .grid__productos .Titulo {
+    color: black;
+    font-style: bold;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.75rem;
+  }
+  body .backgroundInstrumental .grid__productos .galeria {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  body .backgroundInstrumental .grid__productos .galeria .producto {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    max-width: 140%;
+    height: 30rem;
+  }
+  body .imageServicio {
+    width: 25rem;
+    height: 20rem;
+    justify-self: center;
+    animation-name: aparecer2;
+    animation-iteration-count: initial;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    padding-top: 3rem;
+  }
+  body .cardForm {
+    background-color: rgb(247, 239, 239);
+    width: 20rem;
+    height: 20rem;
+    border: 0.2rem solid black;
+    padding-left: 3rem;
+    margin: 3rem 0 3rem 0;
+    border-radius: 0.5rem;
+  }
+  body footer {
+    font-size: 1.2rem;
+  }
 
-  .cardSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
+  .container {
+    min-width: 100vw;
+    min-height: 100vh;
   }
 }
 @media (min-width: 1100px) {
@@ -420,88 +407,13 @@ body footer a {
   body main img {
     height: 30rem;
   }
-
-  .logo {
-    margin-left: 2rem;
-  }
-
-  .nav {
-    visibility: visible;
+  body .cardSection {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: auto;
-    position: relative;
-    padding: 0 1.5rem 0 1.5rem;
-    list-style: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
   }
-
-  .header {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .menu {
-    visibility: hidden;
-  }
-
-  .listNav {
-    list-style: none;
-    display: flex;
-  }
-
-  .container {
-    width: 100%;
-    height: 100vh;
-  }
-
-  .main__title {
-    color: black;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 4rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 2.5rem;
-  }
-
-  .main__image {
-    height: 30rem;
-  }
-
-  .logo {
-    padding-left: 1.5rem;
-  }
-
-  .Titulo {
-    color: black;
-    font-style: bold;
-    font-weight: 700;
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 1.75rem;
-  }
-
-  .producto {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    max-width: 100%;
-    height: 30rem;
-    padding: 1rem 1rem 1rem 1rem;
-  }
-
-  .galeria {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .containerNosotros {
+  body .backgroundInstrumental .containerNosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -509,26 +421,7 @@ body footer a {
     align-items: center;
     justify-content: space-evenly;
   }
-
-  .Texto {
-    color: black;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .imageNosotros, body .imageServicio {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
-    width: 25rem;
-    height: 30rem;
-    padding-top: 5rem;
-    justify-self: center;
-  }
-
-  .tt {
+  body .backgroundInstrumental .containerNosotros .tt {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -537,25 +430,77 @@ body footer a {
     padding-left: 1.5rem;
     padding-top: 3rem;
   }
-
-  .cardForm {
-    background-color: rgb(247, 239, 239);
-    width: 20rem;
-    height: 20rem;
-    border: 0.2rem solid black;
-    padding-left: 3rem;
-    margin: 3rem 0 3rem 0;
-    border-radius: 0.5rem;
+  body .backgroundInstrumental .containerNosotros .tt .Titulo {
+    color: black;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.75rem;
   }
-
-  .cardSection {
+  body .backgroundInstrumental .containerNosotros .tt .Texto {
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+  }
+  body .backgroundInstrumental .containerNosotros .imageNosotros, body .backgroundInstrumental .containerNosotros .imageServicio {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    width: 25rem;
+    height: 30rem;
+    padding-top: 5rem;
+    justify-self: center;
+  }
+  body .backgroundInstrumental .grid__productos .galeria {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+  body .backgroundInstrumental .grid__productos .galeria .producto {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: 30rem;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  body .backgroundInstrumental .grid__productos .Titulo {
+    color: black;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.75rem;
+  }
+  body .backgroundInstrumental .containerServicios {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
   }
-
-  .imageServicio {
+  body .backgroundInstrumental .containerServicios .textoServ .Titulo {
+    color: black;
+    font-style: bold;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.75rem;
+  }
+  body .backgroundInstrumental .containerServicios .textoServ .Texto {
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+  }
+  body .backgroundInstrumental .containerServicios .imageServicio {
     width: 30rem;
     height: 25rem;
     justify-self: center;
@@ -565,6 +510,25 @@ body footer a {
     animation-duration: 1s;
     animation-delay: 0s;
     padding-top: 3rem;
+  }
+  body .cardForm {
+    background-color: rgb(247, 239, 239);
+    width: 20rem;
+    height: 20rem;
+    border: 0.2rem solid black;
+    padding-left: 3rem;
+    margin: 3rem 0 3rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .logo {
+    margin-left: 2rem;
+    padding-left: 1.5rem;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
   }
 }
 
