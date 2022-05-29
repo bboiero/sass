@@ -307,7 +307,7 @@
     grid-template-rows: 1fr 1fr 1fr;
   }
   .grid__productos .galeria .producto {
-    height: 28rem;
+    height: 25rem;
   }
 
   .textoServ .Texto {
