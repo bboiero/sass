@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Instrumed, contacto">
-    <meta name="description" content="En Instrumed podés contactarnos a través de nuestras redes sociales o enviándonos un mensaje.">
+    <meta name="description" content="Instrumed: Empresa dedicada a la fabricación y reparación de instrumental quirúrgico, especialmente especializada en el área de microcirugía y neurocirugía.">
 
-    <link rel="shortcut icon" href="Imagenes/Tool.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="Imagenes/Tool3.ico" type="image/x-icon">
     
     <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet"> 
 
     <!--Fontawesome-->
+
     <script src="https://kit.fontawesome.com/9debaf2155.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
@@ -21,6 +23,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer">
 
+      <!--CSS-->
       <link rel="stylesheet" href="css/style.css">
 
       <!--Animaciones-->
@@ -29,29 +32,50 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
 
-    <title>Instrumed - Contacto</title>
+       <!--Bootstrap-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      
+
+    <title>Instrumed - Inicio</title>
 </head>
 
-<body class="container">
-  <header>
-    <div class="logo"><a  href="index.html">
-      <img src="imagenes/Logo.svg" alt="Logo">
-      </a></div>
-       
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>     
-      
-        
-    </nav>       
+<body class="container-fluid">
+ 
+  <header class="row header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+      <div class="container">
+        <div class="logo"><a  href="index.html">
+          <img src="imagenes/Logo.svg" alt="Logo">
+            </a></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white navList fs-5" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white navList fs-5" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white navList fs-5" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white navList fs-5" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fs-5" href="contacto.html">Contacto</a>
+              </li>
+                           
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
   </header >
 
-  <section class="backgroundInstrumental">
+  <section class="row backgroundInstrumental">
     <div class="containerCard">
       <div class="cardForm animate__animated animate__headShake">
         <form action="">
@@ -60,21 +84,29 @@
           <label for="email">Correo electrónico:</label><br>
           <input type="email" name="Correo electrónico"><br>
           <label for="Consulta">Dejanos tu consulta:</label><br>
-          <textarea name="Consulta" id="Consulta" cols="30" rows="10"></textarea><br>
+          <textarea name="Consulta" id="Consulta" cols="22" rows="8"></textarea><br>
           <input type="submit" value="Enviar consulta"><br>
         </form>
       </div> 
     </div> 
   </section>
 
-  <footer class="footer">
-    <a class="footerLink" href="Contacto.html">Contacto</a>
-    <div> 
+  <div class="row">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8811479154383!2d-68.88445901609121!3d-33.03326157817207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e7538a6b6dc03%3A0x21ce6f0af9085d09!2sGui%C3%B1azu%20706%2C%20M5507%20Luj%C3%A1n%20de%20Cuyo%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1653791381306!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <footer class="row footer">
+    <div class="col fs-5">
+      <a href="Contacto.html">Contacto</a>
+    </div>
+    <div class="col fs-6"> 
       <div> Seguinos en las redes</div>
       <!--Icono de facebook e instagram-->
       <a href="#"><i class="fab fa-facebook fa-2xl"></i></a>
       <a href="#"><i class="fab fa-instagram fa-2xl"></i></a>
     </div>    
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
