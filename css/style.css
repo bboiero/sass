@@ -18,6 +18,23 @@
   background: linear-gradient(to right, rgb(212, 228, 238), rgb(26, 130, 194));
 }
 
+#pr{
+  background-color: rgb(233, 231, 231);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+.cardPresup{
+  background-color: rgb(233, 231, 231);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
 .navList:hover {
   color: black !important;
 }
